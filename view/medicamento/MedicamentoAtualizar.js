@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import GetStyles from '../../model/styles/getStyles'
 import Swal from 'sweetalert2'
 import {ObterMedicamento, DeletarMedicamento, AtualizarMedicamento } from '../../controller/medicamentoController';
+import BotaoVoltar from '../../controls/buttons'
 
 export default function App(props) {
   const CodigoMedicamento = props.route.params.userkey
@@ -122,9 +123,9 @@ export default function App(props) {
   return (
   <SafeAreaView style={styles.container}>
       
-    <TouchableOpacity style={styles.botao} onPress={Voltar} variant="primary" type="submit">
-    <Text style={styles.textoBotaoVerde}>  Voltar</Text>
-    </TouchableOpacity>
+    <View style={styles.containerMax}>
+      <BotaoVoltar Voltar={Voltar}></BotaoVoltar>
+    </View>
 
     <View style={styles.styledContainerMargin}> 
 

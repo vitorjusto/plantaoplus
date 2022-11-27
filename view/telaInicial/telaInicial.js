@@ -44,15 +44,18 @@ export default function App({navigation, setLogin}) {
   return (
     <ImageBackground 
       source={require('../../assets/logonovo.png')}
-      style={{ width: '100%', height: '100%', flex: 1, justifyContent: 'flex-start'}}  
+      style={{ width: '100%', height: '100%', flex: 1, justifyContent: 'flex-start', alignItems: 'center'}}  
     >
-      <View style={{padding: '20px'}}>
+      <View style={styles.containerMax}>
+        <View style={{margin: '20px'}}>
+
         <View style={styles.styledContainer}>
           <View style={{height: '100%'}}>
             <Text style={styles.title}><b>Bem Vindo!</b></Text>
             <HorasTrabalhadasCadastro emailVisivel={false}/>
 
           </View>
+        </View>
         </View>
       </View>
       <View style={{position: 'fixed', bottom: 0, width: '100%'}}>

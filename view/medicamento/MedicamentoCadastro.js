@@ -48,7 +48,6 @@ export default function App() {
 
   return (
   <SafeAreaView style={styles.container}>
-    <ScrollView>
     <View style={styles.styledContainer}> 
     <Input type="text" placeholder="Nome" value={NomeMedicamento} onInput={(e) => setNomeMedicamento(e.target.value)} LabelText={"Nome do Medicamento"}/>
  
@@ -60,7 +59,6 @@ export default function App() {
     <TouchableOpacity style={styles.botaoVerde} onPress={Cadastrar} variant="primary" type="submit">
     <Text style={styles.textoBotaoVerde}>  Cadastrar </Text>
     </TouchableOpacity>
-    </ScrollView>
   </SafeAreaView>
   );
 }

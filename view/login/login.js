@@ -49,8 +49,11 @@ export default function Login({setLogin, setAdm, email, setEmail})
     if(createAdm)
       return(
         <View style={styles.containerMiddle}>
-          <View>
-          <Voltar Voltar={() => setCreateAdm(false)}/>
+          <View style={styles.containerCenter}>
+            <View style={{width: '100%', maxWidth: '400px'}}>
+
+              <Voltar Voltar={() => setCreateAdm(false)}/>
+            </View>
           <Text style={styles.titleMenor}><b>Cadastrar Adiministrador</b></Text>
           <AdmBase></AdmBase>
           </View>
@@ -62,7 +65,7 @@ export default function Login({setLogin, setAdm, email, setEmail})
     
       <Logo></Logo>
 
-    <View>
+    <View style={styles.containerCenter}>
       <Text style={styles.title}><b>Login!</b></Text>
 
     <View style={styles.styledContainer}>
@@ -72,15 +75,19 @@ export default function Login({setLogin, setAdm, email, setEmail})
 
     <Input type="password" placeholder="Digite a sua senha" value={password} onInput={(e) => setPassword(e.target.value)} LabelText={"Senha"}/>
     </View>
-    <View style={styles.containerNoFlex}>
-    <TouchableOpacity onPress={() => setCreateAdm(true)}>
+    <View style={styles.containerCenter}>
+
+    <TouchableOpacity  onPress={() => setCreateAdm(true)}>
       <Text style={styles.linkText}>Clique aqui para cadastrar um usuário</Text>
     </TouchableOpacity>
     </View>
     </View>
+    <View style={styles.containerCenter}>
+
     <TouchableOpacity style={styles.botaoVerde} onPress={handleLogin}>
       <Text style={styles.textoBotaoVerde}>Entrar</Text>
     </TouchableOpacity>
+    </View>
       
    </View>
     );

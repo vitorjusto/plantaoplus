@@ -119,8 +119,9 @@ export default function App(props) {
   }   
   return (
   <SafeAreaView style={styles.container}>
-      
-    <BotaoVoltar Voltar={Voltar}/>
+    <View style={styles.containerMax}>
+      <BotaoVoltar Voltar={Voltar}/>
+    </View>
     <View style={styles.styledContainer}>
 
     <Input type="text" placeholder="Nome" value={Nome} onInput={(e) => setNome(e.target.value)} LabelText={"Nome"}/>

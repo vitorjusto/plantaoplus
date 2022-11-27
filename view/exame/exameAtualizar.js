@@ -145,8 +145,9 @@ export default function App(props) {
   return (
   <ScrollView>
     <SafeAreaView style={styles.container}>
-      
-    <BotaoVoltar Voltar={Voltar}/>
+    <View style={styles.containerMax}>
+      <BotaoVoltar Voltar={Voltar}></BotaoVoltar>
+    </View>
     <View style={styles.styledContainerMargin}> 
     <Input disabled={true} type="text" placeholder="Nome" value={NomePaciente} onInput={(e) => setNomePaciente(e.target.value)} LabelText={"Nome do Paciente"}/>
     

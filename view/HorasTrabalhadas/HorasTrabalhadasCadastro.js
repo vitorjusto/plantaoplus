@@ -48,7 +48,6 @@ export default function App({email, emailVisivel = true}) {
 
   return (
   <SafeAreaView style={styles.container}>
-    <ScrollView>
     <View style={styles.styledContainer}> 
     <Input type="text" value={email} disabled={true} visivel={emailVisivel} onInput={(e) => setNomeMedicamento(e.target.value)} LabelText={"Email"}/>
  
@@ -67,7 +66,6 @@ export default function App({email, emailVisivel = true}) {
     <TouchableOpacity style={styles.botao} onPress={Cadastrar} variant="primary" type="submit">
     <Text style={styles.textoBotaoVerde}>  Cadastrar Horas Trabalhadas </Text>
     </TouchableOpacity>
-    </ScrollView>
   </SafeAreaView>
   );
 }

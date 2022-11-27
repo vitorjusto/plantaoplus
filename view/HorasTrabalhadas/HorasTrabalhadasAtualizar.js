@@ -127,9 +127,10 @@ export default function App(props) {
 
   return (
   <SafeAreaView style={styles.container}>
-    <ScrollView>
-    <View>
-    <BotaoVoltar Voltar={Voltar}/>
+    
+    <View style={styles.containerMax}>
+      <BotaoVoltar Voltar={Voltar}></BotaoVoltar>
+    </View>
     <View style={styles.styledContainer}> 
     <Input type="text" value={Email} disabled={true} onInput={(e) => setNomeMedicamento(e.target.value)} LabelText={"Email"}/>
  
@@ -144,14 +145,12 @@ export default function App(props) {
       </View>
     </View>
     </View>
-    </View>
     <TouchableOpacity style={styles.botaoVermelho} onPress={Deletar} type="submit">
     <Text style={styles.textoBotaoVerde}>  Deletar </Text>
     </TouchableOpacity>
     <TouchableOpacity style={styles.botaoVerde} onPress={AtualizarCadastro} type="submit">
     <Text style={styles.textoBotaoVerde}>  Atualizar </Text>
     </TouchableOpacity>
-    </ScrollView>
   </SafeAreaView>
   );
 }

@@ -91,8 +91,8 @@ export default function App() {
        
     </View>
     <TouchableOpacity style={styles.botaoVerde} onPress={Cadastrar} variant="primary" type="submit">
-    <Text style={styles.textoBotaoVerde}> Cadastrar </Text>
-      </TouchableOpacity>
+      <Text style={styles.textoBotaoVerde}> Cadastrar </Text>
+    </TouchableOpacity>
     </SafeAreaView>
   </ScrollView>
   );

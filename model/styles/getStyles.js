@@ -16,7 +16,15 @@ export default function GetStyles()
           paddingTop: 10,
           paddingLeft: 20,
           paddingRight: 20,
-          backgroundColor: BackgroundColor
+          backgroundColor: BackgroundColor,
+          alignItems: 'center'
+        },
+        containerCenter: {
+          alignItems: 'center'
+        },
+        containerMax:{
+          maxWidth: '400px',
+          width: '100%'
         },
         roundContainer: {
           flex: 1,
@@ -45,13 +53,17 @@ export default function GetStyles()
         styledContainer:{
           backgroundColor: SecundaryColor,
           padding: "10px",
-          borderRadius: "25px"
+          borderRadius: "25px",
+          maxWidth: '400px',
+          width: '100%'
         },
         styledContainerMargin:{
           backgroundColor: SecundaryColor,
           padding: "10px",
           borderRadius: "25px",
-          marginBottom: 10
+          marginBottom: 10,
+          maxWidth: '400px',
+          width: '100%'
         },
 
         input:{
@@ -72,7 +84,8 @@ export default function GetStyles()
           backgroundColor: SecundaryColor,
           marginBottom: '10px',
           padding: 20,
-          borderRadius: '20px'
+          borderRadius: '20px',
+          width: '350px'
         },
         textoLista:{
           color: "rgb(77, 77, 77)",
@@ -87,6 +100,8 @@ export default function GetStyles()
           height: 40,
           paddingTop: 7,
           borderRadius: 20,
+          maxWidth: '400px',
+          width: '100%'
         },
         botaoVoltar:{
           marginBottom: "20px",
@@ -104,7 +119,9 @@ export default function GetStyles()
           backgroundColor: Green,
           height: 40,
           borderRadius: 20,
-          color: "white"
+          color: "white",
+          maxWidth: '400px',
+          width: '100%'
         },
         textoBotaoVerde:{
           color: "white",
@@ -119,6 +136,8 @@ export default function GetStyles()
           color: "white",
           display: 'flex',
           justifyContent: 'center',
+          maxWidth: '400px',
+          width: '100%'
         },
         texto:{
           fontSize: 20,
@@ -127,12 +146,16 @@ export default function GetStyles()
         title:{
           color: fontColor,
           fontSize: '30px',
-          marginBottom: '20px'
+          marginBottom: '20px',
+          maxWidth: '400px',
+          width: '100%'
         },
         titleMenor:{
           color: fontColor,
           fontSize: '20px',
-          marginBottom: '20px'
+          marginBottom: '20px',
+          maxWidth: '400px',
+          width: '100%'
         },
         labelText:{
           color: fontColor,
@@ -142,7 +165,9 @@ export default function GetStyles()
         },
         linkText:{
           color: 'blue',
-          paddingTop: '10px'
+          paddingTop: '10px',
+          maxWidth: '400px',
+          width: '100%'
         },
         containerLinha:{
           

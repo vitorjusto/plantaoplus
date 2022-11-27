@@ -6,6 +6,7 @@ import GetStyles, {fontColor} from '../../model/styles/getStyles'
 import Swal from 'sweetalert2'
 import {ObterMedicamento, DeletarMedicamento, AtualizarMedicamento } from '../../controller/medicamentoController';
 import { AntDesign } from '@expo/vector-icons'; 
+import BotaoVoltar from '../../controls/buttons'
 
 export default function App(props) {
   const CodigoMedicamento = props.route.params.userkey
@@ -165,10 +166,8 @@ export default function App(props) {
     <ScrollView>
   <SafeAreaView style={styles.container}>
       
-    <View style={{width:35}}>
-      <TouchableOpacity style={styles.botaoVoltar} onPress={Voltar} variant="primary" type="submit">
-        <AntDesign name='leftcircleo' size={30} color={fontColor}/>
-      </TouchableOpacity>
+    <View style={styles.containerMax}>
+      <BotaoVoltar Voltar={Voltar}></BotaoVoltar>
     </View>
 
     <View style={styles.styledContainerMargin}> 

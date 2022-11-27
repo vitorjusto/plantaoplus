@@ -84,11 +84,9 @@ export default function App(props) {
     <ScrollView>
     <SafeAreaView style={styles.container}>
       
-      <View style={{width:35}}>
-        <TouchableOpacity style={styles.botaoVoltar} onPress={Voltar} variant="primary" type="submit">
-          <AntDesign name='leftcircleo' size={30} color={fontColor}/>
-        </TouchableOpacity>
-      </View>
+    <View style={styles.containerMax}>
+      <BotaoVoltar Voltar={Voltar}></BotaoVoltar>
+    </View>
     <View style={styles.styledContainerMargin}> 
     <Input disabled={true} type="text" placeholder="Nome" value={NomePaciente} onInput={(e) => setNomePaciente(e.target.value)} LabelText={"Nome do Paciente"}/>
     
