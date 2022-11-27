@@ -94,7 +94,7 @@ export default function App(props) {
  
     <TextArea type="text" placeholder="Descrição" value={DescricaoExame} onInput={(e) => setDescricao(e.target.value)} LabelText={"Desrcrição"}/>
     </View>
-    <View style={styles.styledContainer}> 
+    <View style={styles.styledContainerMargin}> 
     <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
         <View style={{width: "50%"}}>
             <Input type="date" value={DataExame} onInput={(e) => setDataExame(e.target.value)} LabelText={"Data"}/>

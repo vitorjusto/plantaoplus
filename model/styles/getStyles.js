@@ -93,7 +93,6 @@ export default function GetStyles()
           marginBottom: 10
         },
         botao:{
-          marginTop: "20px",
           marginBottom: "20px",
           textAlign: 'center',
           backgroundColor: DarkerColor,
@@ -104,15 +103,14 @@ export default function GetStyles()
           width: '100%'
         },
         botaoVoltar:{
-          marginBottom: "20px",
+          marginBottom: "10px",
           textAlign: 'center',
           height: 40,
           paddingTop: 7,
           borderRadius: 20,
         },
         botaoVerde:{
-          marginTop: "20px",
-          marginBottom: "20px",
+          marginBottom: "10px",
           display: 'flex',
           justifyContent: 'center',
           textAlign: 'center',
@@ -127,8 +125,7 @@ export default function GetStyles()
           color: "white",
         },
         botaoVermelho:{
-          marginTop: "20px",
-          marginBottom: "20px",
+          marginBottom: "10px",
           textAlign: 'center',
           backgroundColor: Red,
           height: 40,

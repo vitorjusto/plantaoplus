@@ -122,7 +122,7 @@ export default function App(props) {
     <View style={styles.containerMax}>
       <BotaoVoltar Voltar={Voltar}/>
     </View>
-    <View style={styles.styledContainer}>
+    <View style={styles.styledContainerMargin}>
 
     <Input type="text" placeholder="Nome" value={Nome} onInput={(e) => setNome(e.target.value)} LabelText={"Nome"}/>
     <Input type="email" disabled={true} placeholder="email" value={Email} onInput={(e) => setEmail(e.target.value)} LabelText={"Email do usuario"}/>

@@ -47,7 +47,7 @@ export function AdmBase() {
 
   return (
   <View style={styles.containerMax}>
-    <View style={styles.styledContainer}> 
+    <View style={styles.styledContainerMargin}> 
     <Input type="text" placeholder="Nome" value={Nome} onInput={(e) => setNome(e.target.value)} LabelText={"Nome"}/>
     <Input type="email" placeholder="email" value={Email} onInput={(e) => setEmail(e.target.value)} LabelText={"Email do usuario"}/>
  

@@ -60,7 +60,7 @@ export function RedefinirSenha({email, setLogin})
 
     return(
     <View style={styles.container}>
-      <View style={styles.styledContainer}> 
+      <View style={styles.styledContainerMargin}> 
     <Input type="password" placeholder="Sua senha" value={password} onInput={(e) => setPassword(e.target.value)} LabelText={`Redefinir senha do email: ${email}`}/>
     <Input type="password" placeholder="Sua senha" value={confirmPassword} onInput={(e) => setConfirm(e.target.value)} LabelText={`Confirmar senha`}/>
       </View>

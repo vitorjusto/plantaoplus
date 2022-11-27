@@ -48,7 +48,7 @@ export default function App() {
 
   return (
   <SafeAreaView style={styles.container}>
-    <View style={styles.styledContainer}> 
+    <View style={styles.styledContainerMargin}> 
     <Input type="text" placeholder="Nome" value={NomeMedicamento} onInput={(e) => setNomeMedicamento(e.target.value)} LabelText={"Nome do Medicamento"}/>
  
     <TextAreaInput placeholder="Descrição" value={Descricao} onInput={(e) => setDescricao(e.target.value)} LabelText={"Descrição"}/>

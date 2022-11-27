@@ -10,7 +10,7 @@ export default function EnderecoControle({ stateRua, stateNumero,stateBairro, st
     
   return (
     <View style={styles.containerNoPadding}>
-    <View style={styles.styledContainer}>
+    <View style={styles.styledContainerMargin}>
         <Input type="text" placeholder="Digite seu endereço" value={stateRua.Rua} onInput ={(e) => stateRua.SetRua(e.target.value)} LabelText={"Rua"}></Input>
     <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
       

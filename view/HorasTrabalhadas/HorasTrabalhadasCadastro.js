@@ -48,7 +48,7 @@ export default function App({email, emailVisivel = true}) {
 
   return (
   <SafeAreaView style={styles.container}>
-    <View style={styles.styledContainer}> 
+    <View style={styles.styledContainerMargin}> 
     <Input type="text" value={email} disabled={true} visivel={emailVisivel} onInput={(e) => setNomeMedicamento(e.target.value)} LabelText={"Email"}/>
  
     <Input type="date" value={DataTrabalhada} onInput={(e) => setDataTrabalhada(e.target.value)} LabelText={"Data Trabalhada"}/>
