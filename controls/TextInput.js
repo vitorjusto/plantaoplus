@@ -31,7 +31,7 @@ export function Input({type, placeholder, value, onInput, LabelText, disabled, v
     return(
         <View style={visivel? styles.input : {display: 'none'}}>
             <Text style={styles.labelText}>{LabelText}</Text>
-            <Form.Control onBeforeInput={teste} disabled={disabled} type={type} placeholder={placeholder} value={value} onInput ={onType} />
+            <Form.Control style={{borderRadius: '25px'}} onBeforeInput={teste} disabled={disabled} type={type} placeholder={placeholder} value={value} onInput ={onType} />
         </View>
     )
 }
@@ -42,7 +42,7 @@ export function TextArea({placeholder, value, onInput, LabelText})
         <View style={styles.input}>
             <Form.Group>
             <Text style={styles.labelText}>{LabelText}</Text>
-            <Form.Control as="textarea" rows={3} placeholder={placeholder} onChange={onInput} value={value}></Form.Control>
+            <Form.Control style={{borderRadius: '25px'}} as="textarea" rows={3} placeholder={placeholder} onChange={onInput} value={value}></Form.Control>
             </Form.Group>
         </View>
     )
@@ -107,7 +107,7 @@ export function MaskInput({type, placeholder, value, onInput, LabelText, mask})
     }
     
     return(
-        <Input type={type} placeholder={placeholder} value={maskedValue} onInput={onValidInput} LabelText={LabelText}/>
+        <Input style={{borderRadius: '25px'}} type={type} placeholder={placeholder} value={maskedValue} onInput={onValidInput} LabelText={LabelText}/>
     )
 }
 
