@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 import { ObterPaciente } from '../../controller/pacienteController';
 import { ObterExame, DeletarExame, AtualizarExame } from '../../controller/exameController';
 import BotaoVoltar from '../../controls/buttons'
+import BotoesAlterar from '../../controls/botoesAlterar';
 
 export default function App(props) {
   const CodigoExame = props.route.params.userkey
@@ -167,12 +168,8 @@ export default function App(props) {
 
     <TextArea type="text" placeholder="Resultado" value={ResultadoExame} onInput={(e) => setResultadoExame(e.target.value)} LabelText={"Resultado do exame"}/>
     </View>
-    <TouchableOpacity style={styles.botaoVermelho} onPress={Deletar} type="submit">
-    <Text style={styles.textoBotaoVerde}>  Deletar</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.botaoVerde} onPress={AtualizarCadastro} type="submit">
-    <Text style={styles.textoBotaoVerde}>  Atualizar </Text>
-    </TouchableOpacity>
+    
+    <BotoesAlterar handleAtualizar={AtualizarCadastro} handleDeletar={Deletar}/>
 
     </SafeAreaView>
   </ScrollView>

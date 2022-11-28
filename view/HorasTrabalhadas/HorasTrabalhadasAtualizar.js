@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 import { ObterHorasTrabalhadas, DeletarHorasTrabalhadas, AtualizarHorasTrabalhadas } from '../../controller/horasTrabalhadasController';
 import {Input} from '../../controls/TextInput';
 import BotaoVoltar from '../../controls/buttons'
+import BotoesAlterar from '../../controls/botoesAlterar';
 
 export default function App(props) {
   const CodigoHorasTrabalhadas = props.route.params.userkey
@@ -145,12 +146,7 @@ export default function App(props) {
       </View>
     </View>
     </View>
-    <TouchableOpacity style={styles.botaoVermelho} onPress={Deletar} type="submit">
-    <Text style={styles.textoBotaoVerde}>  Deletar </Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.botaoVerde} onPress={AtualizarCadastro} type="submit">
-    <Text style={styles.textoBotaoVerde}>  Atualizar </Text>
-    </TouchableOpacity>
+    <BotoesAlterar handleAtualizar={AtualizarCadastro} handleDeletar={Deletar}/>
   </SafeAreaView>
   );
 }

@@ -9,6 +9,7 @@ import { ObterPaciente, DeletarPaciente, AtualizarPaciente } from '../../control
 import BotaoVoltar from '../../controls/buttons'
 import Accordion from 'react-bootstrap/Accordion';
 import ListagemBase from '../../controls/listagemBase'
+import BotoesAlterar from '../../controls/botoesAlterar';
 
 export default function App(props) {
   const [codigoPaciente, setCodigo] = useState('')
@@ -243,12 +244,8 @@ export default function App(props) {
                          stateNumero={{SetNumero: setNumero, Numero: numero}} 
                          stateCidade={{SetCidade: setCidade, Cidade: cidade}}></EnderecoCadastro>
     </View>
-    <TouchableOpacity style={styles.botaoVermelho} onPress={Deletar} variant="danger" type="submit">
-    <Text style={styles.textoBotaoVerde}>Deletar</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.botaoVerde} onPress={AtualizarCadastro} variant="success" type="submit">
-      <Text style={styles.textoBotaoVerde}>Atualizar</Text>
-    </TouchableOpacity>
+    <BotoesAlterar handleAtualizar={AtualizarCadastro} handleDeletar={Deletar}/>
+    
   </SafeAreaView>
   </ScrollView>
   );
