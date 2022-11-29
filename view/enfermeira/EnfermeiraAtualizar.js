@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 import { ObterEnfermeira, DeletarEnfermeira, AtualizarEnfermeira } from '../../controller/enfermeiraController';
 import { Input, MaskInput } from '../../controls/TextInput';
 import BotaoVoltar from '../../controls/buttons'
+import BotoesAlterar from '../../controls/botoesAlterar';
 
 export default function App(props) {
   const codigoEnfermeira = props.route.params.userkey
@@ -166,13 +167,7 @@ export default function App(props) {
        
     </View>
 
-    
-    <TouchableOpacity style={styles.botaoVermelho} onPress={Deletar} type="submit">
-    <Text style={styles.textoBotaoVerde}>Deletar</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.botaoVerde} onPress={Atualizar} type="submit">
-    <Text style={styles.textoBotaoVerde}>Atualizar</Text>
-    </TouchableOpacity>
+    <BotoesAlterar handleAtualizar={Atualizar} handleDeletar={Deletar}/>
     </SafeAreaView>
   </ScrollView>
   );

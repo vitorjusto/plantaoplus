@@ -93,7 +93,8 @@ export default function GetStyles()
           marginBottom: 10
         },
         botao:{
-          marginBottom: "20px",
+          marginTop: '10px',
+          marginBottom: '10px',
           textAlign: 'center',
           backgroundColor: DarkerColor,
           height: 40,
@@ -121,6 +122,17 @@ export default function GetStyles()
           maxWidth: '400px',
           width: '100%'
         },
+        botaoVerdeNoMaxWidth:{
+          marginBottom: "10px",
+          display: 'flex',
+          justifyContent: 'center',
+          textAlign: 'center',
+          backgroundColor: Green,
+          height: 40,
+          borderRadius: 20,
+          color: "white",
+          width: '45%'
+        },
         textoBotaoVerde:{
           color: "white",
         },
@@ -135,6 +147,17 @@ export default function GetStyles()
           justifyContent: 'center',
           maxWidth: '400px',
           width: '100%'
+        },
+        botaoVermelhoNoMaxWidth:{
+          marginBottom: "10px",
+          textAlign: 'center',
+          backgroundColor: Red,
+          height: 40,
+          borderRadius: 20,
+          color: "white",
+          display: 'flex',
+          justifyContent: 'center',
+          width: '45%'
         },
         texto:{
           fontSize: 20,

@@ -6,6 +6,7 @@ import GetStyles from '../../model/styles/getStyles'
 import Swal from 'sweetalert2'
 import {ObterMedicamento, DeletarMedicamento, AtualizarMedicamento } from '../../controller/medicamentoController';
 import BotaoVoltar from '../../controls/buttons'
+import BotoesAlterar from '../../controls/botoesAlterar';
 
 export default function App(props) {
   const CodigoMedicamento = props.route.params.userkey
@@ -136,12 +137,8 @@ export default function App(props) {
     <Input type="text" placeholder="Formula" value={Formula} onInput={(e) => setFormula(e.target.value)} LabelText={"Formula"}/>
  
     </View>
-    <TouchableOpacity style={styles.botaoVermelho} onPress={Deletar} type="submit">
-      <Text style={styles.textoBotaoVerde}> Deletar </Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.botaoVerde} onPress={AtualizarCadastro} type="submit">
-      <Text style={styles.textoBotaoVerde}>  Atualizar </Text>
-    </TouchableOpacity>
+    <BotoesAlterar handleAtualizar={AtualizarCadastro} handleDeletar={Deletar}/>
+    
   </SafeAreaView>
   );
 }

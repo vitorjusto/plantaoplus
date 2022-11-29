@@ -6,6 +6,7 @@ import GetStyles from '../../model/styles/getStyles'
 import Swal from 'sweetalert2'
 import {ObterUsuario, DeletarUsuario, AtualizarUsuario } from '../../controller/Adm';
 import BotaoVoltar from '../../controls/buttons'
+import BotoesAlterar from '../../controls/botoesAlterar';
 
 export default function App(props) {
   const Login = props.route.params.userkey
@@ -128,12 +129,7 @@ export default function App(props) {
     <Input type="email" disabled={true} placeholder="email" value={Email} onInput={(e) => setEmail(e.target.value)} LabelText={"Email do usuario"}/>
  
     </View>
-    <TouchableOpacity style={styles.botaoVermelho} onPress={Deletar} type="submit">
-      <Text style={styles.textoBotaoVerde}> Deletar </Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.botaoVerde} onPress={AtualizarCadastro} type="submit">
-      <Text style={styles.textoBotaoVerde}>  Atualizar </Text>
-    </TouchableOpacity>
+    <BotoesAlterar handleAtualizar={AtualizarCadastro} handleDeletar={Deletar}/>
   </SafeAreaView>
   );
 }
