@@ -48,12 +48,11 @@ export function TextArea({placeholder, value, onInput, LabelText})
     )
 }
 
-export function MaskInput({type, placeholder, value, onInput, LabelText, mask})
+export function MaskInput({type, placeholder, value, onInput, LabelText, mask, maskedValue, setMaskedValue})
 {
-    let [maskedValue, setMaskedValue] = useState(value)
+
 
     let onValidInput = (e) => {
-
         let text = e.target.value
         let i = 0
         let isValid = true

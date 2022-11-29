@@ -19,7 +19,10 @@ export default function App({navigation}) {
   const [Altura, setAltura] = useState('');
   const [Alergia, setAlergia] = useState('');
   const [telefone, setTelefone] = useState('');
-  
+  const [maskedValue, setMaskedValue] = useState('')
+  const [maskedValuecpf, setMaskedValuecpf] = useState('')
+  const [maskedValuesus, setMaskedValuesus] = useState('')
+  const [maskedValuepressao, setMaskedValuepressao] = useState('')
   const [rua, setRua] = useState('');
   const [numero, setNumero] = useState('');
   const [bairro, setBairro] = useState('');
@@ -113,8 +116,13 @@ export default function App({navigation}) {
     setTelefone('');
     setTelefone('');
     setRua('');
+    setBairro('');
     setNumero('');
     setCidade('');
+    setMaskedValue('');
+    setMaskedValuecpf('');
+    setMaskedValuesus('');
+    setMaskedValuepressao('');
     setMedicamentos([]);
   }
 
@@ -127,15 +135,15 @@ export default function App({navigation}) {
 
     <Input type="Date" placeholder="" value={DataNasc} onInput={(e) => setDataNasc(e.target.value)} LabelText={"Data De Nascimento"}/>
 
-    <MaskInput type="text" placeholder="" value={Cpf} mask={"111,111,111-11"} onInput ={(e) => setCpf(e.target.value)} LabelText={"CPF"}/>
+    <MaskInput type="text" maskedValue={maskedValuecpf} setMaskedValue={setMaskedValuecpf} placeholder="" value={Cpf} mask={"111,111,111-11"} onInput ={(e) => setCpf(e.target.value)} LabelText={"CPF"}/>
 
-    <MaskInput type="text" placeholder="Telefone" value={telefone} mask={"(00)0000-0000"} onInput ={(e) => setTelefone(e.target.value)} LabelText={"Telefone"}></MaskInput>
+    <MaskInput type="text" maskedValue={maskedValue} setMaskedValue={setMaskedValue} placeholder="Telefone" value={telefone} mask={"(00)0000-0000"} onInput ={(e) => setTelefone(e.target.value)} LabelText={"Telefone"}></MaskInput>
     </View>
     
     <View style={styles.styledContainerMargin}> 
-    <MaskInput type="text" placeholder="000 0000 0000" value={NumSus} mask={"000 0000 0000"} onInput ={(e) => setNumSus(e.target.value)} LabelText={"Numero do Sus"}></MaskInput>
+    <MaskInput type="text" maskedValue={maskedValuesus} setMaskedValue={setMaskedValuesus} placeholder="000 0000 0000" value={NumSus} mask={"000 0000 0000"} onInput ={(e) => setNumSus(e.target.value)} LabelText={"Numero do Sus"}></MaskInput>
      
-    <MaskInput type="text" placeholder="" value={Pressao} mask={"00.0-00.0"} onInput={(e) => setPressao(e.target.value)} LabelText={"Pressão"}/>
+    <MaskInput type="text" maskedValue={maskedValuepressao} setMaskedValue={setMaskedValuepressao} placeholder="" value={Pressao} mask={"00.0-00.0"} onInput={(e) => setPressao(e.target.value)} LabelText={"Pressão"}/>
 
     <Input type="Number" placeholder="" value={Peso} onInput={(e) => setPeso(e.target.value)} LabelText={"Peso"}/>
     

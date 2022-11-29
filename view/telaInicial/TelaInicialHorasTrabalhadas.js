@@ -64,6 +64,8 @@ export default function App({email, emailVisivel = true}) {
     </View>
 
     </View>
+    <View style={{height:"10px"}}/>
+
     <TouchableOpacity style={styles.botao} onPress={Cadastrar} variant="primary" type="submit">
     <Text style={styles.textoBotaoVerde}>  Cadastrar Horas Trabalhadas </Text>
     </TouchableOpacity>

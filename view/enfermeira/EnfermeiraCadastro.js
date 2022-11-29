@@ -13,7 +13,7 @@ export default function App() {
   const [cargo, setCargo] = useState('');
   const [telefone, setTelefone] = useState('');
   const [email, setEmail] = useState('');
-
+  const [maskedValue, setMaskedValue] = useState('')
   const [rua, setRua] = useState('');
   const [numero, setNumero] = useState('');
   const [bairro, setBairro] = useState('');
@@ -65,6 +65,8 @@ export default function App() {
     setNumero('');
     setCidade('');
     setEmail('');
+    setBairro('');
+    setMaskedValue('');
   }
 
   return (
@@ -82,7 +84,7 @@ export default function App() {
 
     <Input type="text" placeholder="Digite o cargo" value={cargo} onInput ={(e) => setCargo(e.target.value)} LabelText={"Cargo"}></Input>
     
-    <MaskInput type="text" placeholder="Digite o telefone" value={telefone} mask={"(00)0000-0000"} onInput ={(e) => setTelefone(e.target.value)} LabelText={"Telefone"}></MaskInput>
+    <MaskInput maskedValue={maskedValue} setMaskedValue={setMaskedValue}  type="text" placeholder="Digite o telefone" value={telefone} mask={"(00)0000-0000"} onInput ={(e) => setTelefone(e.target.value)} LabelText={"Telefone"}></MaskInput>
     </View> 
        <EnderecoCadastro stateRua={{SetRua: setRua, Rua: rua}}
                          stateBairro={{SetBairro: setBairro, Bairro: bairro}}
