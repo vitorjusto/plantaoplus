@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import { SafeAreaView, View, ScrollView, ActivityIndicator, TouchableOpacity, Text} from 'react-native';
-import {Input, TextArea} from '../../controls/TextInput';
+import {Input, TextArea, Combo} from '../../controls/TextInput';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GetStyles, {fontColor} from '../../model/styles/getStyles'
 import Swal from 'sweetalert2'
@@ -181,7 +181,7 @@ export default function App(props) {
     </View>
     <View style={styles.styledContainerMargin}>
     <Input type="number" placeholder={"quantidade"} LabelText={"Quantidade"} onInput={(e) => setQuantidade(e.target.value)} value={quantidade}/>
-    <Input type="text" placeholder={"periodo"} LabelText={"Periodo"} onInput={(e) => setPeriodo(e.target.value)} value={periodo}/>  
+    <Combo type="text" placeholder={"periodo"} LabelText={"Periodo"} onInput={(e) => setPeriodo(e.target.value)} value={periodo}/>  
     </View> 
 
     <TouchableOpacity style={styles.botaoVerde} onPress={AtualizarCadastro} type="submit">

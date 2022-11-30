@@ -110,6 +110,27 @@ export function MaskInput({type, placeholder, value, onInput, LabelText, mask, m
     )
 }
 
+export function Combo({ placeholder, value, onInput, LabelText, visivel=true})
+{
+
+    function onType(event)
+    {
+        onInput(event)
+    }
+
+
+    return(
+        <View style={visivel? styles.input : {display: 'none'}}>
+            <Text style={styles.labelText}>{LabelText}</Text>
+            <Form.Select style={{borderRadius: '25px'}} value={value} onInput ={onType}>
+                <option value="Diario">Diario</option>
+                <option value="Semanal">Semanal</option>
+                <option value="Quinzenal">Quinzenal</option>
+                <option value="Mensal">Mensal</option>
+            </Form.Select>
+        </View>
+    )
+}
     
 function isDigit(value)
 {
