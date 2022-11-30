@@ -25,8 +25,7 @@ export default function Login({setLogin, setAdm, email, setEmail})
           Swal.fire({
             icon: 'error',
             title: 'Erro',
-            text: 'Não foi possivel encontrar esse usuario, certifique se o email e a senha está escrito corretamente',
-            background: '#facada',
+            text: 'Não foi possível encontrar esse usuário, certifique se o email e a senha está escrito corretamente',
             color: 'black',
             confirmButtonColor: 'rgb(106, 174, 235)'
           })

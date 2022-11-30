@@ -47,7 +47,7 @@ export default function App(props) {
   async function Deletar()
   {
       await Swal.fire({
-          text: 'Deseja deletar este cadastro?',
+          text: 'Deseja deletar este Adiministrador?',
           icon: 'warning',
           showDenyButton: true,
           confirmButtonText: 'Sim',
@@ -57,7 +57,7 @@ export default function App(props) {
           if (result.isConfirmed) {
             DeletarCadastro()
           } else if (result.isDenied) {
-            Swal.fire('', 'Não será deletado', 'info')
+            Swal.fire('', 'Não foi deletado', 'info')
           }
       })
     
@@ -70,14 +70,14 @@ export default function App(props) {
       {
       Swal.fire({
         icon: 'success',
-        text: 'usuario deletado com sucesso!'
+        text: 'Administrador deletado com sucesso!'
       })
       Voltar()
       }else
       {
         Swal.fire({
           icon: 'error',
-          text: 'Não foi possivel deletar o usuario'
+          text: 'Não foi possivel deletar o adiministrador'
         })
         setLoad(false)
       }
@@ -98,7 +98,7 @@ export default function App(props) {
       setLoad(false)
       Swal.fire({
         icon: 'success',
-        text: 'usuario atualizado com sucesso'
+        text: 'Administrador atualizado com sucesso'
       })
       Voltar()
     }else
