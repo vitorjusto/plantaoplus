@@ -15,7 +15,7 @@ export default function App(props) {
   const [Descricao, setDescricao] = useState('')
   const [Formula, setFormula] = useState('')
   const [quantidade, setQuantidade] = useState(0)
-  const [periodo, setPeriodo] = useState('')
+  const [periodo, setPeriodo] = useState("Diario")
   const [isLoading, setLoad] = useState(false);
 
   let medicamento

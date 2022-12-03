@@ -1,5 +1,5 @@
 import React, { useState, useRef} from 'react';
-import { SafeAreaView, View, ScrollView, TouchableOpacity, Text} from 'react-native';
+import { SafeAreaView, View, ScrollView, TouchableOpacity,ActivityIndicator, Text} from 'react-native';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GetStyles from '../../model/styles/getStyles'
 import EnderecoCadastro from '../endereco/enderecoCadastro'
@@ -28,7 +28,11 @@ export default function App({navigation}) {
   const [bairro, setBairro] = useState('');
   const [cidade, setCidade] = useState('');
 
+  const [isLoading, setLoad] = useState(false)
+
   const [medicamentos, setMedicamentos] = useState([]);
+
+  let getMedicamentos = () => { return medicamentos}
 
   const medicamentoPress = (x, y) => {
     
@@ -64,6 +68,7 @@ export default function App({navigation}) {
 
   async function Cadastrar()
   {
+    setLoad(true)
     let paciente = {
       NomePaciente: nome,
       DataNasc: DataNasc,
@@ -101,6 +106,7 @@ export default function App({navigation}) {
         text: result.mensagem
       });
     }
+    setLoad(false)
   }
 
   function limparTela()
@@ -126,6 +132,14 @@ export default function App({navigation}) {
     setMedicamentos([]);
   }
 
+  if(isLoading){
+    return(
+      <View style={styles.loader}>
+        <ActivityIndicator size="large" color="red"/>
+      </View>
+    )
+  }else
+  {
   return (
   <ScrollView>
     <SafeAreaView style={styles.container}>
@@ -157,7 +171,7 @@ export default function App({navigation}) {
         <Accordion.Header>Medicamentos</Accordion.Header>
         <Accordion.Body>
         <ListagemBase
-        dados={medicamentos} 
+        dados={getMedicamentos()} 
         nomePrincipal= "NomeMedicamento"
         nomePrincipalLabel="Nome do Medicamento: "
         nomeSecundario="quantidade"
@@ -182,6 +196,7 @@ export default function App({navigation}) {
   </SafeAreaView>
   </ScrollView>
   );
+  }
 }
 
 const styles = GetStyles()
