@@ -12,7 +12,7 @@ function PegarIcone({imagem})
   return Icone(imagem, false)
 }
 
-export default function App({navigation, setLogin}) {
+export default function App({email, navigation, setLogin}) {
 
   function irParaTelaDePlantao()
   {
@@ -52,7 +52,7 @@ export default function App({navigation, setLogin}) {
         <View style={styles.styledContainer}>
           <View style={{height: '100%'}}>
             <Text style={styles.title}><b>Bem Vindo!</b></Text>
-            <HorasTrabalhadasCadastro emailVisivel={false}/>
+            <HorasTrabalhadasCadastro email={email} emailVisivel={false}/>
 
           </View>
         </View>

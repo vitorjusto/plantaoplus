@@ -49,7 +49,7 @@ export default function App() {
 
   function handleTelaInicial({navigation})
   {
-    return(<TelaInicial navigation={navigation} setLogin={setLogin}/>)
+    return(<TelaInicial email={email} navigation={navigation} setLogin={setLogin}/>)
   }
 
   if(isLogged)

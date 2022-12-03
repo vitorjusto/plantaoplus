@@ -112,13 +112,11 @@ export function MaskInput({type, placeholder, value, onInput, LabelText, mask, m
 
 export function Combo({ placeholder, value, onInput, LabelText, visivel=true})
 {
-
     function onType(event)
     {
         onInput(event)
     }
-
-
+    
     return(
         <View style={visivel? styles.input : {display: 'none'}}>
             <Text style={styles.labelText}>{LabelText}</Text>

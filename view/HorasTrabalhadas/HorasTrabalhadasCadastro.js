@@ -41,7 +41,7 @@ export default function App({email, emailVisivel = true}) {
 
   function limparTela()
   {
-    setDataTrabalhada(date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate())
+    setDataTrabalhada('')
     setHoraInicio('')
     setHoraFim('')
   }
